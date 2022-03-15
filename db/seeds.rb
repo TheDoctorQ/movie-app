@@ -8,3 +8,12 @@
 
 actor = Actor.new({first_name: "Benedict", last_name: "Cumberbatch", known_for: "Sherlock"})
 actor.save
+
+actor = Actor.new({first_name: "Alan", last_name: "Rickman", known_for: "Galaxyquest"})
+actor.save
+
+actor = Actor.new({first_name: "James", last_name: "Spader", known_for: "Stargate"})
+actor.save
+
+actor = Actor.new({first_name: "Laurence", last_name: "Fishburne", known_for: "The Matrix"})
+actor.save
