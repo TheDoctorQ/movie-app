@@ -1,1 +1,7 @@
-GET http://localhost:3000/silverscreen/4.json
+GET http://localhost:3000/silverscreen.json
+
+###
+GET http://localhost:3000/screen.json
+
+###
+GET http://localhost:3000/screen/1.json
