@@ -12,10 +12,9 @@ class MoviesController < ApplicationController
 
   def create
     movie = Movie.new(
-      name: params[:name],
-      price: params[:price],
-      image_url: params[:image_url],
-      description: params[:description]
+      title: params[:title],
+      year: params[:year],
+      plot: params[:plot]
     )
     movie.save
     render json: movie
