@@ -11,4 +11,10 @@ Rails.application.routes.draw do
   get "/screen" => "movies#index"
 
   get "/screen/:id" => "movies#show"
+
+  get "/stage/:input" => "actors#query_solo"
+
+  get "/stage" => "actors#query_solo"
+
+  post "/only" => "actors#body"
 end

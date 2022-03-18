@@ -5,3 +5,15 @@ GET http://localhost:3000/screen.json
 
 ###
 GET http://localhost:3000/screen/1.json
+
+###
+GET http://localhost:3000/stage/Sia.json
+
+
+###
+POST http://localhost:3000/only
+Content-Type: application/json
+
+{
+  "actor": "James Spader"
+}
