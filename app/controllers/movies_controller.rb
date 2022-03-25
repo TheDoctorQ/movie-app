@@ -26,6 +26,7 @@ class MoviesController < ApplicationController
     movie.year = params[:year]
     movie.plot = params[:plot]
     movie.save
+    render json: {message: "Movie has been updated!"}
   end
 
   def destroy

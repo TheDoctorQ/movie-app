@@ -22,6 +22,6 @@ Rails.application.routes.draw do
 
   patch "/changemovie/:id" => "movies#update"
 
-  delete "/retconmov/:id" => "movies#destroy"
+  delete "/retconmovie/:id" => "movies#destroy"
 
 end

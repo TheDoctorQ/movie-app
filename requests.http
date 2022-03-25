@@ -6,8 +6,6 @@ GET http://localhost:3000/actor.json
 ###
 GET http://localhost:3000/actors/1.json
 
-###
-GET http://localhost:3000/movies/
 
 
 ###
@@ -31,3 +29,28 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:3000/retconact/16
+
+###
+GET http://localhost:3000/movies/
+
+###
+POST http://localhost:3000/newmovie
+Content-Type: application/json
+
+{
+  "title": "Star Trek: Generations",
+  "year": 1994,
+  "plot": "In the 23rd century, the Starship Enterprise is dispatched to the scene of a giant energy field about to engulf two ships. Capt. Kirk (William Shatner) averts calamity, but is exposed to the field and presumed dead. Years later, the Enterprise's new commander, Capt. Picard (Patrick Stewart), learns that one of the disaster's survivors, Dr. Soran (Malcolm McDowell), plans to enter the field by destroying a neighboring star. Picard now must collaborate with an unlikely ally in order to stop him."
+}
+###
+PATCH http://localhost:3000/changemovie/5
+Content-Type: application/json
+
+{
+  "title": "Star Trek: First Contact",
+  "year": 1996,
+  "plot": "The Enterprise and its crew follow a Borg ship through a time warp to prevent the Borg from taking over the Earth in a past era. Stuck in the past, Geordi La Forge (LeVar Burton) helps a pioneer of space travel (James Cromwell) in his efforts to create the first warp drive while Capt. Picard (Patrick Stewart) and Cmdr. Data (Brent Spiner) battle the Borg Queen (Alice Krige) as she tries to take over the Enterprise."
+}
+
+###
+DELETE http://localhost:3000/retconmovie/6
