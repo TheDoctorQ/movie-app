@@ -1,19 +1,33 @@
-GET http://localhost:3000/silverscreen.json
+GET http://localhost:3000/actors.json
 
 ###
-GET http://localhost:3000/screen.json
+GET http://localhost:3000/actor.json
 
 ###
-GET http://localhost:3000/screen/1.json
+GET http://localhost:3000/actors/1.json
 
 ###
-GET http://localhost:3000/stage/Sia.json
+GET http://localhost:3000/movies/
 
 
 ###
-POST http://localhost:3000/only
+POST http://localhost:3000/newact
 Content-Type: application/json
 
 {
-  "actor": "James Spader"
+  "first_name": "Patrick",
+  "last_name": "Stewart",
+  "known_for": "Star Trek: The Next Generation"
 }
+###
+PATCH http://localhost:3000/changeact/17.json
+Content-Type: application/json
+
+{
+  "first_name": "Jonathan",
+  "last_name": "Frakes",
+  "known_for": "Star Trek: TNG"
+}
+
+###
+DELETE http://localhost:3000/retconact/16

@@ -1,23 +1,38 @@
 class ActorsController < ApplicationController
 
-  def solo
-    actor = Actor.find_by(id: 2)
+  def index
+    actors = Actor.all
+    render json: actors
+  end
+
+  def show
+    actor = Actor.find_by(id: params[:id])
+    render json: actor
+  end
+
+  def create
+    actor = Actor.new(
+      first_name: params[:first_name],
+      last_name: params[:last_name],
+      known_for: params[:known_for]
+    )
+    actor.save
     render json: actor
   end
   
-  def query_solo
-    input = params[:input]
-    render json: input.as_json
+  def update
+    actor = Actor.find_by(id: params[:id])
+    actor.first_name = params[:first_name]
+    actor.last_name = params[:last_name]
+    actor.known_for = params[:known_for]
+    actor.save
   end
 
-  def segment
-    input = params[:input]
-    render json: input.as_json
-  end 
-
-  def body
-    input = params
-    render json: {message: input}
+  def destroy
+    actor = Actor.find_by(id: params[:id])
+    actor.destroy
+    render json: {message: "Actor has been destroyed.....seems a little excessive."}
   end
+
 
 end

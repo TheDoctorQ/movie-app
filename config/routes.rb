@@ -4,17 +4,24 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   
-  get "/silverscreen" => "actors#solo" 
+  get "/actors" => "actors#index" 
 
-  get "/silverscreen/:id" => "actors#solo" 
+  get "/actors/:id" => "actors#index" 
 
-  get "/screen" => "movies#index"
+  post "/newact" => "actors#create"
 
-  get "/screen/:id" => "movies#show"
+  patch "/changeact/:id" => "actors#update"
 
-  get "/stage/:input" => "actors#query_solo"
+  delete "/retconact/:id" => "actors#destroy"
 
-  get "/stage" => "actors#query_solo"
+  get "/movies" => "movies#index"
 
-  post "/only" => "actors#body"
+  get "/movies/:id" => "movies#show"
+
+  post "/newmovie" => "movies#create"
+
+  patch "/changemovie/:id" => "movies#update"
+
+  delete "/retconmov/:id" => "movies#destroy"
+
 end
