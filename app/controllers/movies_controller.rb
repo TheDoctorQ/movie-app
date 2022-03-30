@@ -14,7 +14,9 @@ class MoviesController < ApplicationController
     movie = Movie.new(
       title: params[:title],
       year: params[:year],
-      plot: params[:plot]
+      plot: params[:plot],
+      director: params[:director],
+      english: params[:english]
     )
     movie.save
     render json: movie
@@ -25,6 +27,8 @@ class MoviesController < ApplicationController
     movie.title = params[:title]
     movie.year = params[:year]
     movie.plot = params[:plot]
+    movie.director = params[:director]
+    movie.english = params[:english]
     movie.save
     render json: {message: "Movie has been updated!"}
   end
