@@ -5,4 +5,7 @@ class Movie < ApplicationRecord
   validates :plot, length: { minimum: 10}
 
   has_many :actors
+  has_many :movie_genre
+  has_many :genre, through: :movie_genre
+
 end

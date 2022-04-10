@@ -17,7 +17,10 @@ class MoviesController < ApplicationController
       year: params[:year],
       plot: params[:plot],
       director: params[:director],
-      english: params[:english]
+      english: params[:english],
+      genre: params[:genre],
+      genre_id: params[:genre_id],
+      movie_id: params[:movie_id]
     )
     movie.save
     render json: movie
@@ -30,6 +33,9 @@ class MoviesController < ApplicationController
     movie.plot = params[:plot]
     movie.director = params[:director]
     movie.english = params[:english]
+    movie.genre = params[:genre]
+    movie.genre_id = params[:genre_id]
+    movie.movie_id = params[:movie_id]
     movie.save
     render json: {message: "Movie has been updated!"}
   end
