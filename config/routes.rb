@@ -24,4 +24,7 @@ Rails.application.routes.draw do
 
   delete "/retconmovie/:id" => "movies#destroy"
 
+  post "/users" => "users#create"
+
+
 end
